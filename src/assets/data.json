@@ -1,0 +1,137 @@
+[
+  {
+    "topic": "劳动合同法",
+    "episodes": [
+      {
+        "text": "李华是一家公司的员工，他的老板张总在没有任何通知的情况下，突然降低了他的工资。李华对此感到非常不满，他决定采取法律手段来维护自己的权益。",
+        "question": "李华是否有权在没有任何通知的情况下对他的工资进行降低？",
+        "options": [
+          "是",
+          "否",
+          "无法确定"
+        ],
+        "answer": 1,
+        "analysis": "根据《劳动合同法》，用人单位应当在提前三十日通知劳动者，经与劳动者协商后，可以降低劳动者的工资标准。用人单位不能在没有通知员工的情况下降低员工的工资。"
+      },
+      {
+        "text": "接着，李华找到了张总，希望能够解决这个问题，但张总却表示，如果李华不接受新的工资，他就会解雇李华。",
+        "question": "张总是否有权因为李华不接受新的工资而解雇他？",
+        "options": [
+          "是",
+          "否",
+          "只有在特定情况下可以"
+        ],
+        "answer": 1,
+        "analysis": "根据《劳动合同法》，用人单位不能因为劳动者不接受降低工资而解雇劳动者。"
+      },
+      {
+        "text": "李华决定将张总告上法庭，他找到了一名律师。律师告诉他，他需要提供一些证据来证明他的工资被降低了。",
+        "question": "李华需要提供哪些证据来证明他的工资被降低了？",
+        "options": [
+          "工资单",
+          "银行转账记录",
+          "A和B都可以"
+        ],
+        "answer": 2,
+        "analysis": "工资单和银行转账记录都可以作为证明工资被降低的证据。"
+      },
+      {
+        "text": "在法庭上，张总的律师表示，张总有权降低李华的工资，因为公司的经营状况不好。",
+        "question": "公司经营状况不好，是否可以作为降低员工工资的理由？",
+        "options": [
+          "是",
+          "否",
+          "只有在特定情况下可以"
+        ],
+        "answer": 2,
+        "analysis": "根据《劳动合同法》，只有在公司经营真正遭遇严重困难，并经过与工会或者全体员工协商一致后，才可以降低员工的工资。"
+      },
+      {
+        "text": "法庭最终判决张总败诉，他需要恢复李华的工资，并支付一定的赔偿金。",
+        "question": "李华成功维权后，他的工资应该恢复到多少？",
+        "options": [
+          "恢复到降薪前的工资",
+          "恢复到降薪后的工资",
+          "恢复到比降薪前更高的工资"
+        ],
+        "answer": 0,
+        "analysis": "根据《劳动合同法》，李华的工资应该恢复到降薪前的工资。"
+      }
+    ]
+  },
+  {
+    "topic": "test",
+    "episodes": [
+      {
+        "text": "test",
+        "question": "test",
+        "options": [
+          "test",
+          "test"
+        ],
+        "answer": 0,
+        "analysis": "test"
+      },
+      {
+        "text": "test",
+        "question": "test",
+        "options": [
+          "test",
+          "test"
+        ],
+        "answer": 0,
+        "analysis": "test"
+      }
+    ]
+  },
+  {
+    "topic": "test",
+    "episodes": [
+      {
+        "text": "test",
+        "question": "test",
+        "options": [
+          "test",
+          "test"
+        ],
+        "answer": 0,
+        "analysis": "test"
+      },
+      {
+        "text": "test",
+        "question": "test",
+        "options": [
+          "test",
+          "test"
+        ],
+        "answer": 0,
+        "analysis": "test"
+      }
+    ]
+  },
+  {
+    "topic": "test",
+    "episodes": [
+      {
+        "text": "test",
+        "question": "test",
+        "options": [
+          "test",
+          "test"
+        ],
+        "answer": 0,
+        "analysis": "test"
+      },
+      {
+        "text": "test",
+        "question": "test",
+        "options": [
+          "test",
+          "test"
+        ],
+        "answer": 0,
+        "analysis": "test"
+      }
+    ]
+  }
+]
