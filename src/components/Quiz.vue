@@ -37,7 +37,7 @@
 
       <v-expand-transition>
         <div v-show="hasChosen">
-          <v-card class="mx-2 mt-4 pa-2" :color="hasChosen && chosenId === episode.answer ? 'success' : 'error'" elevation="4" rounded="lg">
+          <v-card class="mx-2 mt-4 pa-2" :color="chosenId === episode.answer ? 'success' : 'error'" elevation="4" rounded="lg">
             <v-card-item>
               <v-card-title>{{ hasChosen && chosenId === episode.answer ? "回答正确" : "回答错误" }}</v-card-title>
             </v-card-item>
@@ -60,12 +60,10 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-// const { quizId, quizStatus } = defineProps(['quizId', 'quizStatus'])
+import data from '@/assets/data.json'
+
 const { quizId } = defineProps(['quizId'])
 const emits = defineEmits(['update'])
-
-import data from '@/assets/data.json'
-import { h } from 'vue';
 const quiz = computed(() => data[quizId])
 const episode_id = ref(0)
 const episode = computed(() => quiz.value.episodes[episode_id.value])
@@ -77,7 +75,7 @@ const chosenId = ref(-1)
 
 const typeWriter = () => {
   let i = 0
-  const speed = 50 // 打字速度，单位为毫秒
+  const speed = 50  // ms
   const textLength = text.value.length
 
   const typeInterval = setInterval(() => {
@@ -95,26 +93,20 @@ const choose = (option) => {
   if (hasChosen.value) return
   hasChosen.value = true
   chosenId.value = option
-  if (option === episode.value.answer) {
-    console.log('回答正确')
-  } else {
-    console.log('回答错误')
-  }
 }
 
 const nextEpisode = () => {
-  console.log(episode_id.value, quiz.value.episodes.length)
   if (episode_id.value < quiz.value.episodes.length - 1) {
     showQuestion.value = false
     hasChosen.value = false
-    chosenId.value = -1
     textToShow.value = ''
-    episode_id.value++
     setTimeout(() => {
+      chosenId.value = -1
+      episode_id.value++
       typeWriter()
     }, 500)
   } else {
-    emits('update', true, 0, 0)
+    emits('update', true, -1)
   }
 }
 

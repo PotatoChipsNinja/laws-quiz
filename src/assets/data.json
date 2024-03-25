@@ -1,6 +1,8 @@
 [
   {
     "topic": "劳动合同法",
+    "description": "扮演公司员工李华完成维权",
+    "icon": "mdi-text-box-outline",
     "episodes": [
       {
         "text": "李华是一家公司的员工，他的老板张总在没有任何通知的情况下，突然降低了他的工资。李华对此感到非常不满，他决定采取法律手段来维护自己的权益。",
@@ -60,7 +62,9 @@
     ]
   },
   {
-    "topic": "test",
+    "topic": "Topic 1",
+    "description": "TBD",
+    "icon": "mdi-star-circle-outline",
     "episodes": [
       {
         "text": "test",
@@ -85,7 +89,9 @@
     ]
   },
   {
-    "topic": "test",
+    "topic": "Topic 2",
+    "description": "TBD",
+    "icon": "mdi-widgets-outline",
     "episodes": [
       {
         "text": "test",
@@ -110,7 +116,9 @@
     ]
   },
   {
-    "topic": "test",
+    "topic": "Topic 3",
+    "description": "TBD",
+    "icon": "mdi-account-group-outline",
     "episodes": [
       {
         "text": "test",

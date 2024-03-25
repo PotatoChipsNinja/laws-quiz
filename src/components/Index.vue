@@ -13,11 +13,11 @@
         </v-col>
         <v-divider vertical class="px-3"></v-divider>
         <v-col cols="2" class="align-self-center">
-          <span>研究生会LOGO</span>
-          <!-- <v-img
-            class="mr-4"
-            src="@/assets/logo.png"
-          /> -->
+          <!-- <span>研究生会LOGO</span> -->
+          <v-img
+            class="mx-4"
+            src="@/assets/su_logo.jpg"
+          />
         </v-col>
       </v-row>
 
@@ -36,87 +36,18 @@
       <div class="py-4" />
 
       <v-row>
-        <v-col cols="6">
+        <v-col cols="6" v-for="item in data">
           <v-card
             class="py-4 menu-card"
             color="surface-variant"
-            prepend-icon="mdi-text-box-outline"
+            :prepend-icon="item.icon"
             rel="noopener noreferrer"
             rounded="lg"
-            subtitle="扮演公司员工李华完成维权"
+            :subtitle="item.description"
             target="_blank"
-            title="劳动合同法"
+            :title="item.topic"
             variant="text"
             @click="enter(0)"
-          >
-            <v-overlay
-              opacity=".06"
-              scrim="primary"
-              contained
-              model-value
-              persistent
-            />
-          </v-card>
-        </v-col>
-
-        <v-col cols="6">
-          <v-card
-            class="py-4 menu-card"
-            color="surface-variant"
-            prepend-icon="mdi-star-circle-outline"
-            rel="noopener noreferrer"
-            rounded="lg"
-            subtitle="TBD"
-            target="_blank"
-            title="TBD"
-            variant="text"
-            @click="enter(1)"
-          >
-            <v-overlay
-              opacity=".06"
-              scrim="primary"
-              contained
-              model-value
-              persistent
-            />
-          </v-card>
-        </v-col>
-
-        <v-col cols="6">
-          <v-card
-            class="py-4 menu-card"
-            color="surface-variant"
-            prepend-icon="mdi-widgets-outline"
-            rel="noopener noreferrer"
-            rounded="lg"
-            subtitle="TBD"
-            target="_blank"
-            title="TBD"
-            variant="text"
-            @click="enter(2)"
-          >
-            <v-overlay
-              opacity=".06"
-              scrim="primary"
-              contained
-              model-value
-              persistent
-            />
-          </v-card>
-        </v-col>
-
-        <v-col cols="6">
-          <v-card
-            class="py-4 menu-card"
-            color="surface-variant"
-            prepend-icon="mdi-account-group-outline"
-            rel="noopener noreferrer"
-            rounded="lg"
-            subtitle="TBD"
-            target="_blank"
-            title="TBD"
-            variant="text"
-            @click="enter(3)"
           >
             <v-overlay
               opacity=".06"
@@ -133,15 +64,17 @@
 </template>
 
 <script setup>
+import data from '@/assets/data.json'
+
 const emits = defineEmits(['update'])
 
-function enter (quizId) {
-  emits('update', false, quizId, 0)
+const enter = (quizId) => {
+  emits('update', false, quizId)
 }
 </script>
 
 <style>
-  .menu-card i {
-    margin-right: 10px;
-  }
+.menu-card i {
+  margin-right: 10px;
+}
 </style>

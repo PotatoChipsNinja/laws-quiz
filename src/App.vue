@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <Index v-if="atIndex" :atIndex="atIndex" @update="update" />
-      <Quiz v-if="!atIndex" :quizId="quizId" :quizStatus="quizStatus" @update="update" />
+      <Quiz v-if="!atIndex" :quizId="quizId" @update="update" />
     </v-main>
 
     <AppFooter />
@@ -11,13 +11,12 @@
 
 <script setup>
 import { ref } from 'vue'
-const atIndex = ref(true)
-const quizId = ref(0)
-const quizStatus = ref(0)
 
-function update (newAtIndex, newQuizId, newQuizStatus) {
+const atIndex = ref(true)
+const quizId = ref(-1)
+
+const update = (newAtIndex, newQuizId) => {
   atIndex.value = newAtIndex
   quizId.value = newQuizId
-  quizStatus.value = newQuizStatus
 }
 </script>
