@@ -39,7 +39,7 @@
       <div class="py-6" />
 
       <v-row>
-        <v-col cols="6" v-for="item in data">
+        <v-col cols="6" v-for="(item, i) in data">
           <v-card
             class="py-4 menu-card"
             color="surface-variant"
@@ -50,7 +50,7 @@
             target="_blank"
             :title="item.topic"
             variant="text"
-            @click="enter(0)"
+            @click="enter(i)"
           >
             <v-overlay
               opacity=".06"
