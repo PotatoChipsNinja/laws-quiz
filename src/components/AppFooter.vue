@@ -14,6 +14,28 @@
           size="16"
         />
       </a>
+      <a
+        class="d-inline-block mx-2 social-link"
+        rel="noopener noreferrer"
+        target="_blank"
+        @click="reload"
+      >
+        <v-icon
+          icon="mdi-reload"
+          size="16"
+        />
+      </a>
+      <a
+        class="d-inline-block mx-2 social-link"
+        rel="noopener noreferrer"
+        target="_blank"
+        @click="switchMode"
+      >
+        <v-icon
+          icon="mdi-dice-multiple"
+          size="16"
+        />
+      </a>
       {{ (new Date()).toLocaleString() }}
     </div>
 
@@ -32,9 +54,18 @@
 import { useTheme } from 'vuetify'
 
 const theme = useTheme()
+const emits = defineEmits(['switchMode'])
 
-function toggleTheme () {
+const toggleTheme = () => {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
+
+const reload = () => {
+  window.location.reload()
+}
+
+const switchMode = () => {
+  emits('switchMode')
 }
 </script>
 

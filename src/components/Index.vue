@@ -38,7 +38,7 @@
 
       <div class="py-6" />
 
-      <v-row>
+      <v-row v-if="!randomMode">
         <v-col cols="6" v-for="(item, i) in data">
           <v-card
             class="py-4 menu-card"
@@ -62,6 +62,11 @@
           </v-card>
         </v-col>
       </v-row>
+
+      <v-row v-if="randomMode" class="text-center align-centerfill-height mx-auto">
+        <v-col><v-btn size="large" @click="randomQuiz">开始随机情景</v-btn></v-col>
+        
+      </v-row>
     </v-responsive>
   </v-container>
 </template>
@@ -71,9 +76,15 @@ import { useTheme } from 'vuetify'
 import data from '@/assets/data.json'
 
 const theme = useTheme()
+const { randomMode } = defineProps(['randomMode'])
 const emits = defineEmits(['update'])
 
 const enter = (quizId) => {
+  emits('update', false, quizId)
+}
+
+const randomQuiz = () => {
+  const quizId = Math.floor(Math.random() * data.length)
   emits('update', false, quizId)
 }
 </script>
