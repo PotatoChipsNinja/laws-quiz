@@ -4,24 +4,27 @@
       class="align-centerfill-height mx-auto"
       max-width="900"
     >
-      <v-row class="justify-center">
-        <v-col cols="2" class="align-self-center">
+      <v-row class="justify-center px-15">
+        <v-col cols="3" class="align-self-center mx-6">
           <v-img
-            class="ml-4"
             src="@/assets/ict_logo.png"
           />
         </v-col>
-        <v-divider vertical class="px-3"></v-divider>
-        <v-col cols="2" class="align-self-center">
+        <v-divider vertical></v-divider>
+        <v-col cols="3" class="align-self-center mx-6">
           <!-- <span>研究生会LOGO</span> -->
           <v-img
-            class="mx-4"
-            src="@/assets/su_logo.jpg"
+            v-if="theme.global.current.value.dark"
+            src="@/assets/su_logo_dark.png"
+          />
+          <v-img
+            v-if="!theme.global.current.value.dark"
+            src="@/assets/su_logo.png"
           />
         </v-col>
       </v-row>
 
-      <div class="py-4" />
+      <div class="py-6" />
 
       <div class="text-center">
         <h1 class="text-h2 font-weight-bold">普法情景互动答题</h1>
@@ -33,7 +36,7 @@
         <p class="text-h5 font-weight-light">根据情景描述及提示进行选择，回答正确到故事结束即可获得盖章</p>
       </div>
 
-      <div class="py-4" />
+      <div class="py-6" />
 
       <v-row>
         <v-col cols="6" v-for="item in data">
@@ -64,8 +67,10 @@
 </template>
 
 <script setup>
+import { useTheme } from 'vuetify'
 import data from '@/assets/data.json'
 
+const theme = useTheme()
 const emits = defineEmits(['update'])
 
 const enter = (quizId) => {
