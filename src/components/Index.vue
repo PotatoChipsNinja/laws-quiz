@@ -64,8 +64,9 @@
       </v-row>
 
       <v-row v-if="randomMode" class="text-center align-centerfill-height mx-auto">
-        <v-col><v-btn size="large" @click="randomQuiz">开始随机情景</v-btn></v-col>
-        
+        <v-col class="pb-5">
+          <v-btn prepend-icon="mdi-dice-5" color="primary" size="x-large" @click="randomQuiz">开始随机情景</v-btn>
+        </v-col>
       </v-row>
     </v-responsive>
   </v-container>
