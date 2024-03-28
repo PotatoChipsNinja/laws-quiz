@@ -60,8 +60,10 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useToast } from "vue-toastification"
 import data from '@/assets/data.json'
 
+const toast = useToast()
 const { quizId } = defineProps(['quizId'])
 const emits = defineEmits(['update'])
 const quiz = computed(() => data[quizId])
@@ -106,6 +108,7 @@ const nextEpisode = () => {
       typeWriter()
     }, 500)
   } else {
+    toast.success("故事结束，请在盖章处排队盖章")
     emits('update', true, -1)
   }
 }

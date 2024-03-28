@@ -33,7 +33,7 @@
       <div class="py-4" />
 
       <div class="text-center">
-        <p class="text-h5 font-weight-light">根据情景描述及提示进行选择，回答正确到故事结束即可获得盖章</p>
+        <p class="text-h5 font-weight-light">根据情景描述及提示进行选择，完成任意故事即可获得盖章</p>
       </div>
 
       <div class="py-6" />
