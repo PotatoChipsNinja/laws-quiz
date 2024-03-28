@@ -41,7 +41,7 @@
       <v-row v-if="!randomMode">
         <v-col cols="6" v-for="(item, i) in data">
           <v-card
-            class="py-4 menu-card"
+            class="py-1 menu-card"
             color="surface-variant"
             :prepend-icon="item.icon"
             rel="noopener noreferrer"
